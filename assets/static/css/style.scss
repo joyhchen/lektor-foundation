@@ -1,0 +1,33 @@
+$menu-title-color: #ffffff;
+$container-width: 90%;
+
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.top-bar{
+    ul{
+        padding-top: 1rem; 
+        padding-bottom: 1rem;
+        li{
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &.active{
+            }
+            &.menu-text{
+                color: $menu-title-color;
+                padding-right: 3rem;
+            }
+            &:hover > :not(.menu-text){
+                background: rgba(0,0,0,0.2);
+                transition: 200ms ease;
+            }
+        }
+    }
+}
+
+.container{
+    width: $container-width;
+    margin: 0px auto;
+    padding-top: 3rem;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ '/static/css/style.css'|url }}">
+<link rel="stylesheet" href="{{ '/static/css/foundation-sites.css'|url }}">
+<title>{% block title %}{% endblock %}</title>
+
+<body>
+    <nav class="top-bar" data-topbar role="navigation">
+        <div class="top-bar-right">
+            <ul class="vertical medium-horizontal menu">
+                <li class="menu-text">Site Title</li>
+                <li{% if this._path=='/' %} class="active" {% endif %}><a href="{{ '/'|url }}">Welcome</a></li>
+                    {% for href, title in [ ['/blog', 'Blog'], ['/projects', 'Projects'], ['/about', 'About'] ] %}
+                    <li{% if this.is_child_of(href) %} class="active" {% endif %}><a href="{{ href|url }}">{{ title }}</a></li>
+                    {% endfor %}
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block body %}{% endblock %}
+        <footer>
+            &copy; Copyright 2015
+        </footer>
+    </div>
+    <script type="text/javascript" src="{{ '/static/js/vendor/jquery.min.js'|url }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/vendor/what-input.min.js'|url }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/foundation.min.js'|url }}"></script>
+</body>
