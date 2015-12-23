@@ -11,15 +11,15 @@ I plan on creating a plugin, but for now you can add a grid to your page like th
 
 Add to your html file: 
     <div class="row grid">
-            <div class="large-4 columns">
-                {{ this.column1 }}
-            </div>
-            <div class="large-4 columns">
-                {{ this.column2 }}
-            </div>
-            <div class="large-4 columns">
-                {{ this.column3 }}
-            </div>
+        <div class="large-4 columns">
+            {{ this.column1 }}
+        </div>
+        <div class="large-4 columns">
+            {{ this.column2 }}
+        </div>
+        <div class="large-4 columns">
+            {{ this.column3 }}
+        </div>
     </div>
 To your ini file:
   [fields.column1]
