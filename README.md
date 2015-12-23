@@ -1,5 +1,5 @@
 # lektor-foundation
-Zurb Foundation 6 starter theme for Lektor. Preview here: http://i.imgur.com/irFMAt2.png (will move to blog soon)
+Zurb Foundation 6 starter theme for Lektor. Preview here: http://w1.hewlohost.com/~joythewizard/
 
 Hi, I've never worked with a static site generator before, so this is my first time working with Jinja2. Some parts of the site are currently hardcoded, but I'd like to move to get rid of those areas. Also, since this is my first time working with a static site generator, this project is a way for me to learn the ropes, meaning I'll fumble in some (if not many) areas. I'd love some help and I hope this project helps out anyone interested in Lektor. 
 
