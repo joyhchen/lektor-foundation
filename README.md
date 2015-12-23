@@ -10,6 +10,7 @@ This theme uses sass, but if you would rather use vanilla CSS, you can use the c
 I plan on creating a plugin, but for now you can add a grid to your page like this: 
 
 Add to your html file: 
+
     <div class="row grid">
         <div class="large-4 columns">
             {{ this.column1 }}
@@ -21,7 +22,9 @@ Add to your html file:
             {{ this.column3 }}
         </div>
     </div>
+    
 To your ini file:
+
   [fields.column1]
   label = Column1
   type = markdown
