@@ -1,24 +1,38 @@
-/* line 5, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+/* line 6, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
 body {
   font-family: 'Open Sans', Arial, sans-serif; }
 
-/* line 10, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
-.top-bar ul {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-  /* line 13, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
-  .top-bar ul li {
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    /* line 18, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
-    .top-bar ul li.menu-text {
-      color: #ffffff;
-      padding-right: 3rem; }
-
-/* line 26, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+/* line 9, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
 .container {
   width: 90%;
   margin: 0px auto;
   padding-top: 3rem; }
+
+/* line 15, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+.top-bar ul {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  /* line 18, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+  .top-bar ul li {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    /* line 22, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+    .top-bar ul li.menu-text {
+      color: #ffffff;
+      padding-right: 3rem; }
+
+/* line 31, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+.grid div {
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+
+/* line 36, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+footer {
+  background: #2f2f2f;
+  color: #ffffff;
+  margin-top: 3rem; }
+  /* line 40, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
+  footer .container {
+    padding-bottom: 3rem; }
 
 /*# sourceMappingURL=style.css.map */

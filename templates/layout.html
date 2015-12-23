@@ -6,29 +6,33 @@
 
 <body>
     <nav class="top-bar" data-topbar role="navigation">
-            <ul class="vertical medium-horizontal menu dropdown" data-dropdown-menu role="menubar">
-                <li class="menu-text">Site Title</li>
-                <li{% if this._path=='/' %} class="active" {% endif %}><a href="{{ '/'|url }}">Home</a></li>
-                    {% set root = site.get('/') %}
-                    {% for child in root.children recursive %}
-                    <li{% if this==child %} class="active" {% endif %}><a href="{{ child|url }}">{{ child.title }}</a>
-                        {% if child.children and child._model!='blog' %}<ul class="submenu menu vertical first-sub" aria-hidden="true" role="menu" data-submenu="">{{ loop(child.children) }}</ul>{% endif %}
+        <div class="top-bar-left"><ul class="menu"><li class="menu-text">Name of your Site</li></ul></div>
+        <div class="top-bar-right">
+        <ul class="vertical medium-horizontal menu dropdown" data-dropdown-menu role="menubar">
+            <li{% if this._path=='/' %} class="active" {% endif %}><a href="{{ '/'|url }}">Home</a></li>
+                {% set root = site.get('/') %} {% for child in root.children recursive %}
+                <li{% if this==child %} class="active" {% endif %}><a href="{{ child|url }}">{{ child.title }}</a> {% if child.children and child._model!='blog' %}
+                    <ul class="submenu menu vertical first-sub" aria-hidden="true" role="menu" data-submenu="">{{ loop(child.children) }}</ul>{% endif %}
                     </li>
                     {% endfor %}
-            </ul>
+        </ul>
+        </div>
     </nav>
-    
+
     <div class="container">
         {% block body %}{% endblock %}
-        <footer>
-            &copy; Copyright 2015
-        </footer>
     </div>
+    <footer class="extended">
+        <div class="container">
+            <p>&copy; Copyright 2015</p>
+        </div>
+    </footer>
     <script type="text/javascript" src="{{ '/static/js/vendor/jquery.min.js'|url }}"></script>
     <script type="text/javascript" src="{{ '/static/js/vendor/what-input.min.js'|url }}"></script>
     <script type="text/javascript" src="{{ '/static/js/foundation.min.js'|url }}"></script>
     <script type="text/javascript" src="{{ '/static/js/foundation.dropdownMenu.js'|url }}"></script>
     <script>
-      $(document).foundation();
+        $(document).foundation();
+
     </script>
 </body>

@@ -1,21 +1,25 @@
 $menu-title-color: #ffffff;
 $container-width: 90%;
 $top-bar-spacing: 1rem;
-
-body{
+$footer-background-color: #2f2f2f;
+$footer-text-color: #ffffff;
+body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
-
-.top-bar{
-    ul{
-        padding-top: $top-bar-spacing; 
+.container {
+    width: $container-width;
+    margin: 0px auto;
+    padding-top: 3rem;
+}
+.top-bar {
+    ul {
+        padding-top: $top-bar-spacing;
         padding-bottom: $top-bar-spacing;
-        li{
+        li {
             padding-left: $top-bar-spacing;
             padding-right: $top-bar-spacing;
-            &.active{
-            }
-            &.menu-text{
+            &.active {}
+            &.menu-text {
                 color: $menu-title-color;
                 padding-right: 3rem;
             }
@@ -23,8 +27,17 @@ body{
     }
 }
 
-.container{
-    width: $container-width;
-    margin: 0px auto;
-    padding-top: 3rem;
+.grid{
+    div{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+footer {
+    background: $footer-background-color;
+    color: $footer-text-color;
+    margin-top: 3rem;
+    .container {
+        padding-bottom: 3rem;
+    }
 }

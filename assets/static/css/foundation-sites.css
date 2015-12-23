@@ -3251,11 +3251,11 @@ table.hover tr:nth-of-type(even):hover {
   .stacked-for-large .top-bar-left {
     width: 100%; } }
 
-.top-bar-right {
+/*.top-bar-right {
   width: 100%; }
 
 .top-bar-left {
-  width: 100%; }
+  width: 100%; }*/
 
 .top-bar-left {
   float: left; }
