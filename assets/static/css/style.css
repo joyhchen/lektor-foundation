@@ -1,25 +1,21 @@
-/* line 4, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
+/* line 5, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
 body {
   font-family: 'Open Sans', Arial, sans-serif; }
 
-/* line 9, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
+/* line 10, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
 .top-bar ul {
   padding-top: 1rem;
   padding-bottom: 1rem; }
-  /* line 12, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
+  /* line 13, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
   .top-bar ul li {
     padding-left: 1rem;
     padding-right: 1rem; }
-    /* line 17, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
+    /* line 18, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
     .top-bar ul li.menu-text {
       color: #ffffff;
       padding-right: 3rem; }
-    /* line 21, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
-    .top-bar ul li:hover > :not(.menu-text) {
-      background: rgba(0, 0, 0, 0.2);
-      transition: 200ms ease; }
 
-/* line 29, C:/Python27/Scripts/venv/Scripts/myportfolio/assets/static/css/style.scss */
+/* line 26, C:/Users/Joy/Desktop/myportfolio/assets/static/css/style.scss */
 .container {
   width: 90%;
   margin: 0px auto;

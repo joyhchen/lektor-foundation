@@ -1,5 +1,6 @@
 $menu-title-color: #ffffff;
 $container-width: 90%;
+$top-bar-spacing: 1rem;
 
 body{
     font-family: 'Open Sans', Arial, sans-serif;
@@ -7,20 +8,16 @@ body{
 
 .top-bar{
     ul{
-        padding-top: 1rem; 
-        padding-bottom: 1rem;
+        padding-top: $top-bar-spacing; 
+        padding-bottom: $top-bar-spacing;
         li{
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding-left: $top-bar-spacing;
+            padding-right: $top-bar-spacing;
             &.active{
             }
             &.menu-text{
                 color: $menu-title-color;
                 padding-right: 3rem;
-            }
-            &:hover > :not(.menu-text){
-                background: rgba(0,0,0,0.2);
-                transition: 200ms ease;
             }
         }
     }
