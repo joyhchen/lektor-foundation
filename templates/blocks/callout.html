@@ -1,0 +1,9 @@
+<div class="callout {% if this.class %}{{this.class}}{% endif %}" {% if this.closable %}data-closable{% endif %}>
+    {{ this.content }}
+
+    {% if this.closable %}
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+    {% endif %}
+</div>

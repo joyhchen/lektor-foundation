@@ -1,0 +1,10 @@
+<ul class="accordion" data-accordion {% if this.all_closed %}data-allow-all-closed="true"{% endif %}>
+    {% for item in this.items.blocks %}
+        <li class="accordion-item {% if item.open %}is-active{% endif %}" data-accordion-item>
+            <a href="#" class="accordion-title">{{ item.title }}</a>
+            <div class="accordion-content" data-tab-content>
+              {{ item.content }}
+            </div>
+        </li>
+    {% endfor %}
+</ul>

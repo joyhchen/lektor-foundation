@@ -1,0 +1,18 @@
+<table class="{% if this.hover %}hover{% endif %} {% if this.stack %}stack{% endif %} {% if this.scroll %}table-scroll{% endif %} {% if this.class %}{{this.class}}{% endif %}">
+  <thead>
+    <tr>
+        {% for heading in this.headings.blocks %}
+          <th>{{ heading.content }}</th>
+        {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+      {% for row in this.rows.blocks %}
+        <tr>
+            {% for item in row.items.blocks %}
+                <td>{{ item.content }}</td>
+            {% endfor %}
+        </tr>
+      {% endfor %}
+  </tbody>
+</table>

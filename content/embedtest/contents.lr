@@ -1,0 +1,118 @@
+_model: embedtest
+---
+title: Kitchen Sink
+---
+sections: 
+---
+accordions:
+
+#### accordion ####
+all_closed: 
+----
+items:
+
+##### accordion-item #####
+title: sfas
+-----
+open: yes
+-----
+content: dsfsdfsdf
+##### accordion-item #####
+title: dfsdf
+-----
+open: 
+-----
+content: sdfsdfsd
+#### slider ####
+start: 10
+----
+end: 50
+----
+vertical: 
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: 
+----
+closable: 
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: secondary
+----
+closable: 
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: primary
+----
+closable: yes
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: success
+----
+closable: 
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: warning
+----
+closable: 
+#### callout ####
+content:
+
+#### This is a callout component
+
+hello
+----
+class: alert
+----
+closable: 
+#### table ####
+hover: 
+----
+stack: 
+----
+scroll: 
+----
+headings:
+
+##### table-item #####
+content: Heading 1
+##### table-item #####
+content: Heading 2
+##### table-item #####
+content: Heading 3
+----
+rows:
+
+##### table-row #####
+items:
+
+###### table-item ######
+content: Content 1
+###### table-item ######
+content: Content 2
+###### table-item ######
+content: Content 3

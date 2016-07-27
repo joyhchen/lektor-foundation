@@ -1,2 +1,5 @@
 [project]
 name = site
+
+[packages]
+lektor-htmlmin = 0.2

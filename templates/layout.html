@@ -6,11 +6,12 @@
 
 <body>
     <nav class="top-bar" data-topbar role="navigation">
-        <div class="top-bar-left"><ul class="menu"><li class="menu-text">Name of your Site</li></ul></div>
+        {% set root = site.get('/') %} 
+        <div class="top-bar-left"><ul class="menu"><li class="menu-text"><a href="/">{{ root.title }}</a></li></ul></div>
         <div class="top-bar-right">
         <ul class="vertical medium-horizontal menu dropdown" data-dropdown-menu role="menubar">
             <li{% if this._path=='/' %} class="active" {% endif %}><a href="{{ '/'|url }}">Home</a></li>
-                {% set root = site.get('/') %} {% for child in root.children recursive %}
+                {% for child in root.children recursive %}
                 <li{% if this==child %} class="active" {% endif %}><a href="{{ child|url }}">{{ child.title }}</a> {% if child.children and child._model!='blog' %}
                     <ul class="submenu menu vertical first-sub" aria-hidden="true" role="menu" data-submenu="">{{ loop(child.children) }}</ul>{% endif %}
                     </li>
