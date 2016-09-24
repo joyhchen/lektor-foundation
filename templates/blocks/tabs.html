@@ -3,7 +3,7 @@
         {% set count = 0 %}
         {% for tab in this.tabs.blocks %}
             {% set count = count+1 %}
-            <li class="tabs-title is-active"><a href="#panel{{count}}" aria-selected="true">{{ tab.title }}</a></li>
+            <li class="tabs-title {% if this.active %}is-active{% endif %}"><a href="#panel{{count}}" {% if this.active %}aria-selected="true"{% endif %}>{{ tab.title }}</a></li>
         {% endfor %}
     </ul>
 

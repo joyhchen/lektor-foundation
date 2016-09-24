@@ -1,5 +1,9 @@
 components:
 
+#### md-section ####
+content: ### Accordion
+----
+class: 
 #### accordion ####
 all_closed: 
 ----
@@ -17,12 +21,20 @@ title: Accordion Item 2
 open: 
 -----
 content: Item 2 content
+#### md-section ####
+content: ### Slider
+----
+class: 
 #### slider ####
 start: 0
 ----
 end: 50
 ----
 vertical: 
+#### md-section ####
+content: ### Callout
+----
+class: 
 #### callout ####
 content:
 
@@ -31,6 +43,10 @@ This is a callout.
 class: 
 ----
 closable: 
+#### md-section ####
+content: ### Table
+----
+class: 
 #### table ####
 hover: 
 ----
@@ -69,19 +85,27 @@ content: Row 2 Content 1
 content: Row 2 Content 2
 ###### table-item ######
 content: Row 2 Content 2
+#### md-section ####
+content: ### Progress Bar
+----
+class: 
 #### progress-bar ####
 percent: 50
 ----
 class: 
 ----
 text_appear: 
+#### md-section ####
+content: ### Tabs
+----
+class: 
 #### tabs ####
 tabs:
 
 ##### tabs-item #####
 title: Tab 1
 -----
-active: 
+active: yes
 -----
 content: Tab 1 content
 ##### tabs-item #####
@@ -90,5 +114,20 @@ title: Tab 2
 active: 
 -----
 content: Tab 2 content
+#### md-section ####
+content: ### Modal
+----
+class: 
+#### modal ####
+link: Click me for a modal!
+----
+class: button
+----
+content:
+
+##### md-section #####
+content: Modal content
+-----
+class: 
 ---
 title: Kitchen Sink

@@ -1,0 +1,7 @@
+<p><a data-open="modal{{this._id}}" class="{% if this.class %}{{this.class}}{% endif %}">{{this.link}}</a></p>
+
+<div class="reveal" id="modal{{this._id}}" data-reveal>
+    {% for block in this.content.blocks %}
+        {{ block }}
+    {% endfor %}
+</div>
