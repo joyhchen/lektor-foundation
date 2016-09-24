@@ -1,0 +1,19 @@
+<div>
+    <ul class="tabs" data-tabs id="lektor-tabs">
+        {% set count = 0 %}
+        {% for tab in this.tabs.blocks %}
+            {% set count = count+1 %}
+            <li class="tabs-title is-active"><a href="#panel{{count}}" aria-selected="true">{{ tab.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="lektor-tabs">
+        {% set count = 0 %}
+        {% for tab in this.tabs.blocks %}
+            {% set count = count+1 %}
+            <div class="tabs-panel {% if this.active %}is-active{% endif %}" id="panel{{count}}">
+                {{ tab.content }}
+            </div>
+        {% endfor %}
+    </div>
+</div>

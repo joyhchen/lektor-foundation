@@ -1,0 +1,9 @@
+<div class="{% if this.class %}{{this.class}}{% endif %} progress" role="progressbar" tabindex="0" aria-valuenow="{{this.percent}}" aria-valuemin="0" aria-valuetext="{{this.percent}} percent" aria-valuemax="100">
+    {% if this.text_appear %}
+        <span class="progress-meter" style="width: {{this.percent}}%">
+            <p class="progress-meter-text">{{this.percent}}%</p>
+        </span>
+    {% else %}
+        <div class="progress-meter" style="width: {{this.percent}}%"></div>
+    {% endif %}
+</div>

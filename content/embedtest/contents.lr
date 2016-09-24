@@ -1,10 +1,4 @@
-_model: embedtest
----
-title: Kitchen Sink
----
-sections: 
----
-accordions:
+components:
 
 #### accordion ####
 all_closed: 
@@ -12,19 +6,19 @@ all_closed:
 items:
 
 ##### accordion-item #####
-title: sfas
------
-open: yes
------
-content: dsfsdfsdf
-##### accordion-item #####
-title: dfsdf
+title: Accordion Item 1
 -----
 open: 
 -----
-content: sdfsdfsd
+content: Item 1 content
+##### accordion-item #####
+title: Accordion Item 2
+-----
+open: 
+-----
+content: Item 2 content
 #### slider ####
-start: 10
+start: 0
 ----
 end: 50
 ----
@@ -32,61 +26,9 @@ vertical:
 #### callout ####
 content:
 
-#### This is a callout component
-
-hello
+This is a callout. 
 ----
 class: 
-----
-closable: 
-#### callout ####
-content:
-
-#### This is a callout component
-
-hello
-----
-class: secondary
-----
-closable: 
-#### callout ####
-content:
-
-#### This is a callout component
-
-hello
-----
-class: primary
-----
-closable: yes
-#### callout ####
-content:
-
-#### This is a callout component
-
-hello
-----
-class: success
-----
-closable: 
-#### callout ####
-content:
-
-#### This is a callout component
-
-hello
-----
-class: warning
-----
-closable: 
-#### callout ####
-content:
-
-#### This is a callout component
-
-hello
-----
-class: alert
 ----
 closable: 
 #### table ####
@@ -96,14 +38,16 @@ stack:
 ----
 scroll: 
 ----
+class: 
+----
 headings:
 
 ##### table-item #####
-content: Heading 1
+content: Table Heading 1
 ##### table-item #####
-content: Heading 2
+content: Table Heading 2
 ##### table-item #####
-content: Heading 3
+content: Table Heading 3
 ----
 rows:
 
@@ -111,8 +55,40 @@ rows:
 items:
 
 ###### table-item ######
-content: Content 1
+content: Row 1 Content 1
 ###### table-item ######
-content: Content 2
+content: Row 1 Content 2
 ###### table-item ######
-content: Content 3
+content: Row 1 Content 3
+##### table-row #####
+items:
+
+###### table-item ######
+content: Row 2 Content 1
+###### table-item ######
+content: Row 2 Content 2
+###### table-item ######
+content: Row 2 Content 2
+#### progress-bar ####
+percent: 50
+----
+class: 
+----
+text_appear: 
+#### tabs ####
+tabs:
+
+##### tabs-item #####
+title: Tab 1
+-----
+active: 
+-----
+content: Tab 1 content
+##### tabs-item #####
+title: Tab 2
+-----
+active: 
+-----
+content: Tab 2 content
+---
+title: Kitchen Sink
