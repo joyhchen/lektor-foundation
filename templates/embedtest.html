@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
+
 {% block title %}{{ this.title }}{% endblock %}
+
 {% block body %}
-  <h2>{{ this.title }}</h2>
-  {{ this.body }}
 
-{% for component in this.components.blocks %}
-    {{ component }}
-{% endfor %}
+    <h2>{{ this.title }}</h2>
 
+    {% for component in this.components.blocks %}
+        {{ component }}
+    {% endfor %}
 
 {% endblock %}

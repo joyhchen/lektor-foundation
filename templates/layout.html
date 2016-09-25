@@ -5,6 +5,7 @@
 <title>{% block title %}{% endblock %}</title>
 
 <body>
+    <!-- NAVIGATION -->
     <nav class="top-bar" data-topbar role="navigation">
         {% set root = site.get('/') %} 
         <div class="top-bar-left"><ul class="menu"><li class="menu-text"><a href="/">{{ root.title }}</a></li></ul></div>
@@ -19,19 +20,25 @@
         </ul>
         </div>
     </nav>
-
+    <!-- END NAVIGATION -->
+    
+    <!-- PAGE CONTENT -->
     <div class="container">
         {% block body %}{% endblock %}
     </div>
+    <!-- END PAGE CONTENT -->
+    
+    <!-- FOOTER -->
     <footer class="extended">
         <div class="container">
             <p>Footer</p>
         </div>
     </footer>
+    <!-- END FOOTER -->
+    
     <script type="text/javascript" src="{{ '/static/js/vendor/jquery.min.js'|asseturl }}"></script>
     <script type="text/javascript" src="{{ '/static/js/vendor/what-input.min.js'|asseturl }}"></script>
     <script type="text/javascript" src="{{ '/static/js/foundation.min.js'|asseturl }}"></script>
-    <script type="text/javascript" src="{{ '/static/js/foundation.dropdownMenu.js'|asseturl }}"></script>
     <script>
         $(document).foundation();
     </script>

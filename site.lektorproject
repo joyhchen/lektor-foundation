@@ -3,3 +3,4 @@ name = Site Name Here
 
 [packages]
 lektor-htmlmin = 0.2
+lektor-embed-x = 0.1.2
