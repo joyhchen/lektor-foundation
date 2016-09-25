@@ -2,8 +2,11 @@ title: Hello Website
 ---
 pub_date: 2015-12-22
 ---
-author: You
+author: Joy Chen
 ---
 body:
 
-This is an example blog post.  Not much here but that's not the point :)
+#### md-section ####
+content: Hello Website - test blog post
+----
+class: 

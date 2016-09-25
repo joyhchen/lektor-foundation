@@ -15,6 +15,13 @@
     {% endif %}
     on {{ post.pub_date }}
   </p>
-  {{ post.body }}
+      {% if not from_index %}
+          {% if post.body.blocks %}
+            {% for block in post.body.blocks %}
+                {{ block }}
+            {% endfor %}
+          {%endif%}
+      <a href="{{post.parent|url}}">Back to Posts</a>
+      {% endif %}
   </div>
 {% endmacro %}

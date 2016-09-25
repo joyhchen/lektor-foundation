@@ -2,5 +2,7 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   <h2>{{ this.title }}</h2>
-  {{ this.body }}
+    {% for block in this.body.blocks %}
+        {{ block }}
+    {% endfor %}
 {% endblock %}

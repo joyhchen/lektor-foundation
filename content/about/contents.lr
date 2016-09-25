@@ -1,7 +1,10 @@
-title: About this Website
+_model: page
+---
+title: About
 ---
 body:
 
-This is a website that was made with the Lektor quickstart.
-
-And it does not contain a lot of information.
+#### md-section ####
+content: This is the about page.
+----
+class: 

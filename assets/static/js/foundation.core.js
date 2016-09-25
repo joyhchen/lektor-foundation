@@ -1,7 +1,8 @@
 !function($) {
+
 "use strict";
 
-var FOUNDATION_VERSION = '6.0.6';
+var FOUNDATION_VERSION = '6.2.3';
 
 // Global Foundation object
 // This is attached to the window, or used as a module for AMD/Browserify
@@ -17,10 +18,6 @@ var Foundation = {
    * Stores generated unique ids for plugin instances
    */
   _uuids: [],
-  /**
-   * Stores currently active plugins.
-   */
-  _activePlugins: {},
 
   /**
    * Returns a boolean for RTL support
@@ -45,48 +42,50 @@ var Foundation = {
   },
   /**
    * @function
-   * Creates a pointer to an instance of a Plugin within the Foundation._activePlugins object.
-   * Sets the `[data-pluginName="uniqueIdHere"]`, allowing easy access to any plugin's internal methods.
-   * Also fires the initialization event for each plugin, consolidating repeditive code.
+   * Populates the _uuids array with pointers to each individual plugin instance.
+   * Adds the `zfPlugin` data-attribute to programmatically created plugins to allow use of $(selector).foundation(method) calls.
+   * Also fires the initialization event for each plugin, consolidating repetitive code.
    * @param {Object} plugin - an instance of a plugin, usually `this` in context.
+   * @param {String} name - the name of the plugin, passed as a camelCased string.
    * @fires Plugin#init
    */
-  registerPlugin: function(plugin){
-    var pluginName = functionName(plugin.constructor).toLowerCase();
-
+  registerPlugin: function(plugin, name){
+    var pluginName = name ? hyphenate(name) : functionName(plugin.constructor).toLowerCase();
     plugin.uuid = this.GetYoDigits(6, pluginName);
 
-    if(!plugin.$element.attr('data-' + pluginName)){
-      plugin.$element.attr('data-' + pluginName, plugin.uuid);
-    }
+    if(!plugin.$element.attr(`data-${pluginName}`)){ plugin.$element.attr(`data-${pluginName}`, plugin.uuid); }
+    if(!plugin.$element.data('zfPlugin')){ plugin.$element.data('zfPlugin', plugin); }
           /**
            * Fires when the plugin has initialized.
            * @event Plugin#init
            */
-    plugin.$element.trigger('init.zf.' + pluginName);
+    plugin.$element.trigger(`init.zf.${pluginName}`);
 
-    this._activePlugins[plugin.uuid] = plugin;
+    this._uuids.push(plugin.uuid);
 
     return;
   },
   /**
    * @function
-   * Removes the pointer for an instance of a Plugin from the Foundation._activePlugins obj.
-   * Also fires the destroyed event for the plugin, consolidating repeditive code.
+   * Removes the plugins uuid from the _uuids array.
+   * Removes the zfPlugin data attribute, as well as the data-plugin-name attribute.
+   * Also fires the destroyed event for the plugin, consolidating repetitive code.
    * @param {Object} plugin - an instance of a plugin, usually `this` in context.
    * @fires Plugin#destroyed
    */
   unregisterPlugin: function(plugin){
-    var pluginName = functionName(plugin.constructor).toLowerCase();
+    var pluginName = hyphenate(functionName(plugin.$element.data('zfPlugin').constructor));
 
-    delete this._activePlugins[plugin.uuid];
-    plugin.$element.removeAttr('data-' + pluginName)
+    this._uuids.splice(this._uuids.indexOf(plugin.uuid), 1);
+    plugin.$element.removeAttr(`data-${pluginName}`).removeData('zfPlugin')
           /**
            * Fires when the plugin has been destroyed.
            * @event Plugin#destroyed
            */
-          .trigger('destroyed.zf.' + pluginName);
-
+          .trigger(`destroyed.zf.${pluginName}`);
+    for(var prop in plugin){
+      plugin[prop] = null;//clean up script to prep for garbage collection.
+    }
     return;
   },
 
@@ -96,34 +95,39 @@ var Foundation = {
    * @param {String} plugins - optional string of an individual plugin key, attained by calling `$(element).data('pluginName')`, or string of a plugin class i.e. `'dropdown'`
    * @default If no argument is passed, reflow all currently active plugins.
    */
-  _reflow: function(plugins){
-    var actvPlugins = Object.keys(this._activePlugins);
-    var _this = this;
-
-    if(!plugins){
-      actvPlugins.forEach(function(p){
-        _this._activePlugins[p]._init();
-      });
-
-    }else if(typeof plugins === 'string'){
-      var namespace = plugins.split('-')[1];
-
-      if(namespace){
-
-        this._activePlugins[plugins]._init();
-
-      }else{
-        namespace = new RegExp(plugins, 'i');
-
-        actvPlugins.filter(function(p){
-          return namespace.test(p);
-        }).forEach(function(p){
-          _this._activePlugins[p]._init();
-        });
-      }
-    }
-
-  },
+   reInit: function(plugins){
+     var isJQ = plugins instanceof $;
+     try{
+       if(isJQ){
+         plugins.each(function(){
+           $(this).data('zfPlugin')._init();
+         });
+       }else{
+         var type = typeof plugins,
+         _this = this,
+         fns = {
+           'object': function(plgs){
+             plgs.forEach(function(p){
+               p = hyphenate(p);
+               $('[data-'+ p +']').foundation('_init');
+             });
+           },
+           'string': function(){
+             plugins = hyphenate(plugins);
+             $('[data-'+ plugins +']').foundation('_init');
+           },
+           'undefined': function(){
+             this['object'](Object.keys(_this._plugins));
+           }
+         };
+         fns[type](plugins);
+       }
+     }catch(err){
+       console.error(err);
+     }finally{
+       return plugins;
+     }
+   },
 
   /**
    * returns a random base-36 uid with namespacing
@@ -135,7 +139,7 @@ var Foundation = {
    */
   GetYoDigits: function(length, namespace){
     length = length || 6;
-    return Math.round((Math.pow(36, length + 1) - Math.random() * Math.pow(36, length))).toString(36).slice(1) + (namespace ? '-' + namespace : '');
+    return Math.round((Math.pow(36, length + 1) - Math.random() * Math.pow(36, length))).toString(36).slice(1) + (namespace ? `-${namespace}` : '');
   },
   /**
    * Initialize plugins on any elements within `elem` (and `elem` itself) that aren't already initialized.
@@ -168,7 +172,7 @@ var Foundation = {
         var $el = $(this),
             opts = {};
         // Don't double-dip on plugins
-        if ($el.data('zf-plugin')) {
+        if ($el.data('zfPlugin')) {
           console.warn("Tried to initialize "+name+" on an element that already has a Foundation plugin.");
           return;
         }
@@ -180,7 +184,7 @@ var Foundation = {
           });
         }
         try{
-          $el.data('zf-plugin', new plugin($(this), opts));
+          $el.data('zfPlugin', new plugin($(this), opts));
         }catch(er){
           console.error(er);
         }finally{
@@ -215,7 +219,6 @@ var Foundation = {
     }
   }
 };
-
 
 Foundation.util = {
   /**
@@ -278,7 +281,7 @@ var foundation = function(method) {
       throw new ReferenceError("We're sorry, '" + method + "' is not an available method for " + (plugClass ? functionName(plugClass) : 'this element') + '.');
     }
   }else{//error for invalid argument type
-    throw new TypeError("We're sorry, '" + type + "' is not a valid parameter. You must use a string representing the method you wish to invoke.");
+    throw new TypeError(`We're sorry, ${type} is not a valid parameter. You must use a string representing the method you wish to invoke.`);
   }
   return this;
 };
@@ -363,7 +366,7 @@ function functionName(fn) {
 function parseValue(str){
   if(/true/.test(str)) return true;
   else if(/false/.test(str)) return false;
-  else if(!isNaN(str * 1)/* && typeof (str * 1) === "number"*/) return parseFloat(str);
+  else if(!isNaN(str * 1)) return parseFloat(str);
   return str;
 }
 // Convert PascalCase to kebab-case

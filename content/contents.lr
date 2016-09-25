@@ -1,21 +1,8 @@
-title: Site
----
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.
-###Test
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus molestie lacus, nec tincidunt augue lobortis eget. Quisque mollis mattis leo vel fermentum. Mauris cursus non ipsum ac accumsan. Duis lacus dolor, feugiat sed accumsan a, pellentesque ut elit. Etiam et lorem quis enim rhoncus imperdiet. Integer ut nisl risus. Vestibulum egestas libero dictum elit sollicitudin laoreet. Mauris fringilla massa nisi, eget rhoncus ex consectetur ut. Pellentesque sit amet arcu magna. Suspendisse consectetur gravida leo, id ultricies ligula iaculis vel. Ut et ipsum id ante malesuada tincidunt. Fusce quis vehicula tortor, sed accumsan mauris. Phasellus pulvinar odio vel cursus venenatis. Proin nec ligula eget purus blandit elementum. Phasellus elementum lectus augue, eu suscipit tellus lobortis eget. Nam consectetur tellus leo, sed scelerisque risus efficitur non.
-
-###Test1
-Etiam lacinia in purus ultrices convallis. Pellentesque in ex consectetur, tincidunt purus vitae, rhoncus augue. Aliquam velit quam, convallis vel odio sed, imperdiet interdum augue. Nulla non nulla sed nulla efficitur tincidunt sed non tortor. Praesent ac massa eu nulla tempus fermentum id posuere massa. Sed arcu nisl, malesuada quis dignissim a, consequat interdum diam. Vivamus vehicula, magna id molestie ornare, odio enim rhoncus augue, in venenatis metus metus suscipit urna. Praesent a risus ac nibh posuere ultrices. Maecenas pulvinar hendrerit interdum. Donec non nisi tortor. Ut finibus libero ut bibendum ullamcorper.
-
-![Alt text](jorji-release.png)
-
->Quote text
+#### md-section ####
+content: This is a generic page that currently serves as the home page of this website.
+----
+class: 
 ---
-grid1: Etiam lacinia in purus ultrices convallis. Pellentesque in ex consectetur, tincidunt purus vitae, rhoncus augue. Aliquam velit quam, convallis vel odio sed, imperdiet interdum augue. Nulla non nulla sed nulla efficitur tincidunt sed non tortor. Praesent ac massa eu nulla tempus fermentum id posuere massa. Sed arcu nisl, malesuada quis dignissim a, consequat interdum diam. Vivamus vehicula, magna id molestie ornare, odio enim rhoncus augue, in venenatis metus metus suscipit urna. Praesent a risus ac nibh posuere ultrices. Maecenas pulvinar hendrerit interdum. Donec non nisi tortor. Ut finibus libero ut bibendum ullamcorper.
----
-grid2: Etiam lacinia in purus ultrices convallis. Pellentesque in ex consectetur, tincidunt purus vitae, rhoncus augue. Aliquam velit quam, convallis vel odio sed, imperdiet interdum augue. Nulla non nulla sed nulla efficitur tincidunt sed non tortor. Praesent ac massa eu nulla tempus fermentum id posuere massa. Sed arcu nisl, malesuada quis dignissim a, consequat interdum diam. Vivamus vehicula, magna id molestie ornare, odio enim rhoncus augue, in venenatis metus metus suscipit urna. Praesent a risus ac nibh posuere ultrices. Maecenas pulvinar hendrerit interdum. Donec non nisi tortor. Ut finibus libero ut bibendum ullamcorper.
----
-grid3: Etiam lacinia in purus ultrices convallis. Pellentesque in ex consectetur, tincidunt purus vitae, rhoncus augue. Aliquam velit quam, convallis vel odio sed, imperdiet interdum augue. Nulla non nulla sed nulla efficitur tincidunt sed non tortor. Praesent ac massa eu nulla tempus fermentum id posuere massa. Sed arcu nisl, malesuada quis dignissim a, consequat interdum diam. Vivamus vehicula, magna id molestie ornare, odio enim rhoncus augue, in venenatis metus metus suscipit urna. Praesent a risus ac nibh posuere ultrices. Maecenas pulvinar hendrerit interdum. Donec non nisi tortor. Ut finibus libero ut bibendum ullamcorper.
+title: Site

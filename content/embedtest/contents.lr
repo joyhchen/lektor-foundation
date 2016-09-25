@@ -3,7 +3,7 @@ components:
 #### md-section ####
 content: ### Accordion
 ----
-class: 
+class: heading-padding
 #### accordion ####
 all_closed: 
 ----
@@ -24,7 +24,7 @@ content: Item 2 content
 #### md-section ####
 content: ### Slider
 ----
-class: 
+class: heading-padding
 #### slider ####
 start: 0
 ----
@@ -34,7 +34,7 @@ vertical:
 #### md-section ####
 content: ### Callout
 ----
-class: 
+class: heading-padding
 #### callout ####
 content:
 
@@ -46,7 +46,7 @@ closable:
 #### md-section ####
 content: ### Table
 ----
-class: 
+class: heading-padding
 #### table ####
 hover: 
 ----
@@ -88,7 +88,7 @@ content: Row 2 Content 2
 #### md-section ####
 content: ### Progress Bar
 ----
-class: 
+class: heading-padding
 #### progress-bar ####
 percent: 50
 ----
@@ -98,7 +98,7 @@ text_appear:
 #### md-section ####
 content: ### Tabs
 ----
-class: 
+class: heading-padding
 #### tabs ####
 tabs:
 
@@ -117,7 +117,7 @@ content: Tab 2 content
 #### md-section ####
 content: ### Modal
 ----
-class: 
+class: heading-padding
 #### modal ####
 link: Click me for a modal!
 ----

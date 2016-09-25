@@ -3,8 +3,4 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   {{ render_blog_post(this) }}
-{% for image in this.attachments.images %}
-  <div class="image"><img src="{{ image|url }}"></div>
-{% endfor %}
-
 {% endblock %}

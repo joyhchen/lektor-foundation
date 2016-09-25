@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/css/style.css'|url }}">
-<link rel="stylesheet" href="{{ '/static/css/foundation-sites.css'|url }}">
+<link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+<link rel="stylesheet" href="{{ '/static/css/foundation-sites.css'|asseturl }}">
 <title>{% block title %}{% endblock %}</title>
 
 <body>
@@ -25,13 +25,13 @@
     </div>
     <footer class="extended">
         <div class="container">
-            <p>&copy; Copyright 2015</p>
+            <p>Footer</p>
         </div>
     </footer>
-    <script type="text/javascript" src="{{ '/static/js/vendor/jquery.min.js'|url }}"></script>
-    <script type="text/javascript" src="{{ '/static/js/vendor/what-input.min.js'|url }}"></script>
-    <script type="text/javascript" src="{{ '/static/js/foundation.min.js'|url }}"></script>
-    <script type="text/javascript" src="{{ '/static/js/foundation.dropdownMenu.js'|url }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/vendor/jquery.min.js'|asseturl }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/vendor/what-input.min.js'|asseturl }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/foundation.min.js'|asseturl }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/foundation.dropdownMenu.js'|asseturl }}"></script>
     <script>
         $(document).foundation();
     </script>

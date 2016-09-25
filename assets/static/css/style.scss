@@ -1,16 +1,22 @@
-$menu-title-color: #ffffff;
 $container-width: 90%;
-$top-bar-spacing: 1rem;
+$top-bar-spacing: 0.5rem;
 $footer-background-color: #2f2f2f;
 $footer-text-color: #ffffff;
+
 body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
+
 .container {
     width: $container-width;
     margin: 0px auto;
     padding-top: 3rem;
 }
+
+/**
+* Navigation 
+**/
+
 .top-bar {
     ul {
         padding-top: $top-bar-spacing;
@@ -19,20 +25,24 @@ body {
             padding-left: $top-bar-spacing;
             padding-right: $top-bar-spacing;
             &.active {}
-            &.menu-text {
-                color: $menu-title-color;
-                padding-right: 3rem;
-            }
         }
     }
 }
 
-.grid{
-    div{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
+/**
+* Auxiliary Styles
+* These are optional styles included out of the box that you can add to components. None of them will be pre-applied.
+**/
+
+.heading-padding{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
+
+/**
+* Footer 
+**/
+
 footer {
     background: $footer-background-color;
     color: $footer-text-color;

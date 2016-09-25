@@ -1,1 +1,10 @@
 title: Beginnings with Lektor
+---
+author: Joy Chen
+---
+body:
+
+#### md-section ####
+content: Beginnings with Lektor - test blog post.
+----
+class: 

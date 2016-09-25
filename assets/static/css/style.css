@@ -1,29 +1,43 @@
+/* line 6, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
 body {
   font-family: 'Open Sans', Arial, sans-serif; }
 
+/* line 10, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
 .container {
   width: 90%;
   margin: 0px auto;
   padding-top: 3rem; }
 
+/**
+* Navigation 
+**/
+/* line 21, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
 .top-bar ul {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+  /* line 24, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
   .top-bar ul li {
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    .top-bar ul li.menu-text {
-      color: #ffffff;
-      padding-right: 3rem; }
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
 
-.grid div {
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+/**
+* Auxiliary Styles
+* These are optional styles included out of the box that you can add to components. None of them will be pre-applied.
+**/
+/* line 37, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
+.heading-padding {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
 
+/**
+* Footer 
+**/
+/* line 46, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
 footer {
   background: #2f2f2f;
   color: #ffffff;
   margin-top: 3rem; }
+  /* line 50, C:/Users/Joy/Documents/GitHub/lektor-foundation/assets/static/css/style.scss */
   footer .container {
     padding-bottom: 3rem; }
 

@@ -1,0 +1,4 @@
+<img src="{{this.image|url}}" {% if this.caption %}alt="{{this.caption}}"{% endif %}>
+{% if this.caption %}
+<p class="caption">{{this.caption}}</p>
+{% endif %}
