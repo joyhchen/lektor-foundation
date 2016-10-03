@@ -6,3 +6,14 @@ content: This is a generic page that currently serves as the home page of this w
 class: 
 ---
 title: Site
+---
+_template: page.html
+---
+_model: index
+---
+footer:
+
+#### md-section ####
+content: Set your footer content when you edit the home page.
+----
+class: 

@@ -8,3 +8,5 @@ content: New Blog Post - test blog post.
 class: 
 ---
 author: Joy Chen
+---
+pub_date: 2016-10-03

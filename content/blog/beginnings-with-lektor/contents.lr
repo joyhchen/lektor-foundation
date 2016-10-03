@@ -8,3 +8,5 @@ body:
 content: Beginnings with Lektor - test blog post.
 ----
 class: 
+---
+pub_date: 2016-10-03

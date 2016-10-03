@@ -31,7 +31,10 @@
     <!-- FOOTER -->
     <footer class="extended">
         <div class="container">
-            <p>Footer</p>
+            {% set root = site.get('/') %} 
+            {% for block in root.footer.blocks %}
+                {{block}}
+            {% endfor %}
         </div>
     </footer>
     <!-- END FOOTER -->
