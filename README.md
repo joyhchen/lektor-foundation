@@ -1,6 +1,12 @@
 # lektor-foundation
 
-Lektor-foundation is a Zurb Foundation 6 (http://foundation.zurb.com/sites/docs/) starter theme for Lektor, a static content management system (http://getlektor.com). To get started, download the theme, navigate to the location where you downloaded it, and run "lektor server" for a preview.
+Lektor-foundation is a Zurb Foundation 6 (http://foundation.zurb.com/sites/docs/) starter theme for Lektor, a static content management system (http://getlektor.com). To get started:
+
+```
+$ git clone https://github.com/joyhchen/lektor-foundation
+$ cd lektor-foundation
+$ lektor server
+```
 
 Demo: http://joyyy.xyz/foundation
 
